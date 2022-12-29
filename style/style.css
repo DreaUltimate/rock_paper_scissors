@@ -1,0 +1,59 @@
+body {
+  background-color: seashell;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1em 0;
+
+}
+
+.selections {
+  gap: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.selection {
+  text-align: center;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 5em;
+  display: flex;
+  transition: 150ms;
+}
+
+.selection:hover {
+  transform: scale(1.2);
+}
+
+.results {
+  font-size: 2em;
+  margin-top: 2em;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.result-score {
+  margin-left: 1rem;
+  font-size: 1em;
+  color: #333
+}
+
+.result-selection {
+  opacity: .5;
+}
+
+.result-selection.winner {
+  opacity: 1;
+  font-size: 1.5em;
+}
