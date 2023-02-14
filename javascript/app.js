@@ -2,6 +2,7 @@ const selectionButtons = document.querySelectorAll("[data-selection]")
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
+const resetButton = document.querySelector('[data-reset-button]') // add reset button element
 const SELECTIONS = [
   {
     name: 'rock',
@@ -28,6 +29,12 @@ selectionButtons.forEach(selectionButtons => {
     const selection = SELECTIONS.find(selection => selection.name === selectionName)
     makeSelection(selection)
   })
+})
+
+resetButton.addEventListener('click', e => { // add reset button event listener
+  computerScoreSpan.innerText = '0'
+  yourScoreSpan.innerText = '0'
+  finalColumn.innerHTML = ''
 })
 
 function addSelectionResult(selection, winner) {
@@ -62,3 +69,4 @@ function randomSelection() {
 function incrementScore(scoreSpan) {
   scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
 }
+
