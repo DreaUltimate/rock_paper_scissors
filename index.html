@@ -9,26 +9,26 @@
   <title>Rock Paper Scissors (Dius.Dre)</title>
 </head>
 <body>
-  <div class="intro">
-    <h1>Rock, Paper & Scissors</h1>
-    <p>Dius(Dre)</p>
-  </div>
-  <div class="selections">
-    <button class="selection" data-selection="rock">✊</button>
-    <button class="selection" data-selection="paper">✋</button>
-    <button class="selection" data-selection="scissors">✌️</button>
-  </div>
-  <div class="results">
-    <div>
-      YOU
-      <span class="result-score" data-your-score="">0</span>
-    </div>
-    <div data-final-column>
-      AI
-      <span class="result-score" data-computer-score="">0</span>
-    </div>
-  </div>
-
-  
+	<div class="scoreboard">
+		<div class="computer-score">
+			<span data-computer-score>0</span>
+			<p>Computer</p>
+		</div>
+		<div class="result">
+			<div data-final-column></div>
+			<button data-reset-button>Reset</button> <!-- add reset button element -->
+		</div>
+		<div class="your-score">
+			<span data-your-score>0</span>
+			<p>You</p>
+		</div>
+	</div>
+	<div class="selection">
+		<button data-selection="rock">✊</button>
+		<button data-selection="paper">✋</button>
+		<button data-selection="scissors">✌️</button>
+	</div>
+	<script type="./javascript/app.js" src="script.js"></script>
+</body>
 </body>
 </html>
