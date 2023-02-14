@@ -1,59 +1,101 @@
 body {
-  background-color: seashell;
+  background-color: #f4f4f4;
+  font-family: sans-serif;
 }
 
-.intro {
+.scoreboard {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.scoreboard p {
+  margin: 0;
+}
+
+.computer-score, .your-score {
+  text-align: center;
+}
+
+.computer-score span, .your-score span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 1em 0;
-
-}
-
-.selections {
-  gap: 1em;
-  display: flex;
-  justify-content: center;
-}
-
-.selection {
-  text-align: center;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 5em;
-  display: flex;
-  transition: 150ms;
-}
-
-.selection:hover {
-  transform: scale(1.2);
-}
-
-.results {
-  font-size: 2em;
-  margin-top: 2em;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  align-items: center;
-}
-
-.result-score {
-  margin-left: 1rem;
-  font-size: 1em;
-  color: #333
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color: #fff;
+  margin: 0 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .result-selection {
-  opacity: .5;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .result-selection.winner {
-  opacity: 1;
-  font-size: 1.5em;
+  background-color: #c9ffc5;
+  border: 2px solid #6ae066;
+}
+
+.selection {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.selection button {
+  font-size: 5rem;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.selection button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+[data-reset-button] {
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+[data-reset-button]:hover {
+  background-color: #666;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
